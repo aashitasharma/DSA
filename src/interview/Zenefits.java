@@ -33,116 +33,25 @@ public class Zenefits {
 	return Math.max(best, c) + ones;
     }
 
-    /**
-     * O(2^k)
-     * 
-     * @param a
-     * @param n
-     * @return
-     */
-    public static int uneatenLeaves(int[] a, int n) {
-
-	Set<Integer> caterpillars = new HashSet<Integer>();
-	// k is very less
+    static int uneatenLeaves(int n, int[] a) {
+	int[] b = new int[n + 1];
 	for (int i = 0; i < a.length; i++) {
-	    boolean flag = true;
-	    for (int j = 0; j < a.length && flag; j++) {
-		if (j!=i && a[i] % a[j] == 0)
-		    flag = false;
-	    }
-	    if (flag) {
-		caterpillars.add(a[i]);
-	    }
+	    for (int j = 0; a[i] * j < n + 1; j++)
+		b[a[i] * j] = 1;
 	}
-	System.out.println(caterpillars);
-	List<List<Integer>> subsets=allSubSets(caterpillars);
-	System.out.println(subsets);
-	Set<Integer> lcm=new HashSet<Integer>();
-	for(List<Integer> l:subsets){
-	    if(l.size()>1){
-		int lcm_i=1;
-		for(Integer i:l)
-		    lcm_i*=i;
-		if(lcm_i<=n)
-		    lcm.add(lcm_i);
+	int count = 0;
+	for (int i = 0; i < n; i++) {
+	    if (b[i] != 1) {
+		count++;
 	    }
 	}
-	System.out.println(lcm);
-	
-	int eatenLeaves = 0;
-	for (Integer i : caterpillars) {
-	    eatenLeaves += n / i;
-	}
-	System.out.println(eatenLeaves);
-	for (Integer i : lcm) {
-	    eatenLeaves -= n / i;
-	    System.out.println(n / i);
-	}
-	
-	return n - eatenLeaves;
+	return count;
     }
 
-    /**
-     * O(nk)
-     * @param N
-     * @param A
-     * @return
-     */
-    public static int uneatenLeaves(int N, int[] A) {
-	int uneatenLeaves = 0;
-	int ASize = A.length;
-	int countEaten = 0;
-
-	HashMap<Integer, Integer> positionEatenHash = new HashMap<Integer, Integer>();
-	for (int i = 0; i < ASize; i++) {
-	    int catervalue = A[i];
-	    for (int j = 1; j * catervalue <= N; j++) {
-		if (!positionEatenHash.containsKey(A[i] * j)) {
-		    positionEatenHash.put(A[i] * j, 1);
-		    countEaten++;
-		}
-	    }
-	}
-	uneatenLeaves = N - countEaten;
-	return uneatenLeaves;
-    }
-
-    public static List<List<Integer>> allSubSets(Set<Integer> set){
-	List<List<Integer>> mainList=new ArrayList<List<Integer>>();
-	boolean first=true;
-	for(Integer i:set){
-	    if(!first){
-		List<List<Integer>> temp=shallowCopy(mainList);
-		for(List<Integer> l:mainList){
-		    l.add(i);
-		}
-		mainList.addAll(temp);
-	    }
-	    first=false;
-	    List<Integer> subList=new ArrayList<Integer>();
-	    subList.add(i);
-	    mainList.add(subList);
-	    
-	}
-	return mainList;
-    }
-    
-    public static List<List<Integer>> shallowCopy(List<List<Integer>> ml){
-	List<List<Integer>> temp=new ArrayList<List<Integer>>();
-	for(List<Integer> l:ml){
-	    List<Integer> subList=new ArrayList<Integer>();
-	    for(Integer i:l){
-		subList.add(i);
-	    }
-	    temp.add(subList);
-	}
-	return temp;
-    }
-    
     public static void main(String[] args) {
-	int[] a = {3,7,5,2};
-	int n=30;
-	System.out.println(uneatenLeaves(a, n));
+	int[] a = { 3, 7, 5 };
+	int n = 20;
+	// System.out.println(uneatenLeaves(a, n));
 	System.out.println(uneatenLeaves(n, a));
     }
 
