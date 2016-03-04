@@ -1,4 +1,4 @@
-package com.test.data_structures;
+package data_structures;
 
 class BNode{
 	public double eval(){return 0;};

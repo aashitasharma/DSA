@@ -1,6 +1,6 @@
 package medium;
 
-import DataStructures.TreeNode;
+import data_structures.TreeNode;
 
 /**
  * keep a count of number of nodes on the left of each

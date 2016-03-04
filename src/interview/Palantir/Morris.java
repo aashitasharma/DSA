@@ -6,7 +6,7 @@ package interview.Palantir;
  */
 import java.util.*;
 
-import DataStructures.TreeNode;
+import data_structures.TreeNode;
 public class Morris {
     private static void inorderMorris(TreeNode root) {
 	ArrayList<Integer> values = new ArrayList<Integer>();

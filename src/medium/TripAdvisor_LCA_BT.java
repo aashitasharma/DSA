@@ -1,6 +1,6 @@
 package medium;
 
-import DataStructures.TreeNode;
+import data_structures.TreeNode;
 
 public class TripAdvisor_LCA_BT {
 

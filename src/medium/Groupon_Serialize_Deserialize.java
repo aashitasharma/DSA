@@ -1,7 +1,7 @@
 package medium;
 import java.util.*;
 
-import DataStructures.TreeNode;
+import data_structures.TreeNode;
 public class Groupon_Serialize_Deserialize {
 
     public String serialize(TreeNode root) {

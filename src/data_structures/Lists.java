@@ -1,4 +1,4 @@
-package com.test.data_structures;
+package data_structures;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,17 +97,4 @@ public class Lists {
         return newhead;
         
     }
-}
-
-class ListNode {
-	int val;
-	ListNode next;
-	ListNode(int x) {
-		val = x;
-		next = null;
-	}
-	@Override
-	public String toString(){
-		return val+"";
-	}
 }

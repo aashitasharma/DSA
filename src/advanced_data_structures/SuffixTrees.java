@@ -1,4 +1,4 @@
-package com.test.advanced_data_structures;
+package advanced_data_structures;
 
 public class SuffixTrees {
 

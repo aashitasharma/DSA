@@ -1,4 +1,4 @@
-package com.test.data_structures;
+package data_structures;
 
 import java.util.LinkedList;
 

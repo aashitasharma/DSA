@@ -1,6 +1,6 @@
 package easy;
 
-import DataStructures.TreeNode;
+import data_structures.TreeNode;
 
 public class InvertBinaryTree {
 

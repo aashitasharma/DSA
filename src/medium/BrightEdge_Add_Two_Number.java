@@ -1,6 +1,6 @@
 package medium;
 
-import DataStructures.ListNode;
+import data_structures.ListNode;
 
 public class BrightEdge_Add_Two_Number {
 

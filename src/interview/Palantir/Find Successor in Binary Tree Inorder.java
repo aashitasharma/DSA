@@ -1,6 +1,6 @@
 package interview.Palantir;
 
-import DataStructures.TreeNode;
+import data_structures.TreeNode;
 
 /*
  * Find the successor in a binary search tree: 
@@ -11,7 +11,7 @@ import DataStructures.TreeNode;
 /* O(n) time O(1) space */
 class FindSuccessor {
     private static void inorderSuccessor(TreeNode root, int t) {
-	TreeNode cur = root;
+	data_structures.TreeNode cur = root;
 	int successor = -1;
 
 	// int minGreaterNode = Integer.MAX_VALUE;

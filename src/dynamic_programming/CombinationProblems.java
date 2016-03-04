@@ -1,4 +1,4 @@
-package com.test.dynamic_programming;
+package dynamic_programming;
 
 import java.util.*;
 
