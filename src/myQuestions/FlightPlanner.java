@@ -5,53 +5,45 @@ import java.util.*;
 
 public class FlightPlanner {
 
-    public static int SEED = 100;
+	public static int SEED = 100;
 
-    public FlightPlanner() {
-	
-    }
+	public FlightPlanner() {
 
-    public static List<List<Integer>> testCasesGen() {
-	Random randomGenerator = new Random();
-	List<List<Integer>> testCases = new ArrayList<List<Integer>>();
-	int i = 0;
-	int limit = randomGenerator.nextInt(SEED);
-	while (i < limit) {
-	    List<Integer> a = new ArrayList<Integer>();
-	    a.add(randomGenerator.nextInt(SEED));
-	    a.add(randomGenerator.nextInt(SEED));
-	    a.add(randomGenerator.nextInt(SEED));
-	    i++;
-	    testCases.add(a);
 	}
-	return testCases;
-    }
-    
-    public static void main(String[] args){
-	
-	Random randomGenerator = new Random();
-	int notc=randomGenerator.nextInt(500);
-	int[] output=new int[notc];
-	for(int i=0;i<notc;i++){
-	    List<List<Integer>> tc=testCasesGen();
-//	    output[i]=calculateFuel(tc);
-	    System.out.println(testCasesGen());
+
+	public static List<Integer> testCasesGen() {
+		Random randomGenerator = new Random();
+		List<Integer> testCases = new ArrayList<Integer>();
+		int i = 0;
+		int limit = randomGenerator.nextInt(SEED);
+		while (i < limit) {
+			i++;
+			testCases.add(randomGenerator.nextInt(SEED));
+		}
+		return testCases;
 	}
-//	for(int i:output)
-//	    System.out.println(i);
-    }
-    public static int calculateFuel(List<List<Integer>> route){
-	if(route.size()==0)
-	    return 0;
-	int[] z=new int[route.size()];
-	int idx=0;
-	for(List<Integer> l:route){
-	    z[idx++]=l.get(2);
+
+	public static void main(String[] args) {
+
+		Random randomGenerator = new Random();
+		int notc = randomGenerator.nextInt(500);
+		int[] output = new int[notc];
+		for (int i = 0; i < notc; i++) {
+			List<Integer> tc = testCasesGen();
+			// output[i]=calculateFuel(tc);
+			System.out.println(testCasesGen());
+		}
+		// for(int i:output)
+		// System.out.println(i);
 	}
-	int maxHeight = z[0];
-	for(int i=1;i<z.length;i++){
-	    maxHeight=Math.max(z[i], maxHeight);
+
+	public static int calculateFuel(List<Integer> route) {
+		if (route.size() == 0)
+			return 0;
+		int maxHeight = route.get(0);
+		for (int i = 1; i < route.size(); i++) {
+			maxHeight = Math.max(route.get(i), maxHeight);
+		}
+		return maxHeight - route.get(0);
 	}
-	return maxHeight - z[0]; 
-    }
 }
