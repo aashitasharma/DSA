@@ -18,7 +18,7 @@ public class NextPermutation {
 		}
 		if (k == 0){
 			reverse(a, 0, a.length-1);
-			return;
+			return;	
 		}
 		int highest_index = 0;
 		for (int i = a.length-1; i > k; i--) {
