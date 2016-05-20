@@ -1,0 +1,22 @@
+1. Design a hashMap in Java. Implement put, get, remove, resize methods.
+
+2. Design a Twitter feeds API. How would you actually connect it from a mobile? What happens behind the Twitter network? how do the Trends get published? From where does Twitter get the information for a particular trend(Eg: #Obama, #nfl) and publish it out? What protocol does it use? How do you connect to Twitter API? How does Twitter handle multiple connections?
+
+3. LRU Cache
+
+4. Given string a and b, with b containing all distinct characters, find the longest common subsequence's
+
+5. Given a 4*n block, find number of different ways of filling it with 1*2 smaller blocks. Rotation of smaller blocks is allowed.
+
+6. Given an array of numbers, for every index i, find nearest index j such that a[j] > a[i].If such an index doesn’t exist for i, ­1 should be printed.
+
+7. Serialize & Deserialize a binary tree
+
+8. Design a ride sharing app
+
+9. Add a third dimension of time to a hashmap , so ur hashmap will look something like this - HashMap<K, t, V> where t is a float value. Implement the get and put methods to this map. The get method should be something like - map.get(K,t) which should give us the value. If t does not exists then map should return the closest t' such that t' is smaller than t. For example, if map contains (K,1,V1) and (K,2,V2) and the user does a get(k,1.5) then the output should be v1 as 1 is the next smallest number to 1.5
+
+
+ 
+
+

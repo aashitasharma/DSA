@@ -181,7 +181,7 @@ public class LongestSubsequence {
 			sum += i;
 		return sum;
 	}
-
+	
 	public static void main(String[] args) {
 		int[] a = { 5, 4, 6, 3, 1, 2, 3 };
 		System.out.println(LIS(a));
