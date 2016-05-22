@@ -109,5 +109,4 @@ public class NQueens {
 		}
 		return res;
 	}
-
 }
