@@ -1,0 +1,69 @@
+a) Write a function which simply returns 0X00000000 if input value is 0 else 0XFFFFFFFF. Condition is no branching , no looping and no ternary operators.
+Solutions
+
+    int bit(int n)
+    {
+    return (!n + (n|~n));
+    }
+
+
+b) Infinite bit stream is coming (one bit at a time). At a given time tell whether number is divisible by 3 or not
+Solution:
+
+     sum=0;
+    while(bit stream is coming)
+    {
+    sum=sum<<1+1*(current bit);
+    if(sum%3==0)
+    printf(�divisible\n�);
+    else
+    printf(�not divisible�);
+    }
+
+
+c) Check whether a given string consists the substring of type �ab*c�
+Solution:
+
+      char *str=INPUT STRING
+    int i=0,flag=0;
+    while(str[i])
+    {
+    if(str[i++]==�a�)
+    {
+    while(str[i]==�b�)
+    i++;
+    if(str[i++]==�c�)
+    {
+    printf(�substring found�);
+    flag=1;
+    break;
+    }
+    }
+    }
+    if(!flag)
+    printf(�substring not found�);
+
+
+
+1. Given a BST and 2 numbers a,b. Find the number of hops to reach from a to b.
+
+2. Given a set of unsorted numbers without a range, find the median. No sort operations should be used. Solution should be of the order n log n.
+
+3. Given 2 sorted arrays on size n, find the median of both of them are merged.
+
+4. Big integer multiplication,
+
+5. counting of palindromes within a string,
+
+6. identifying the possibility to sort a partially sorted linked list with a single swap,
+
+7. Hanoi towers,
+
+8. finding Top K elements of an array
+
+9. Given an array of integers, find all the 3 numbers that sum up to a target number? (Variants asked by 3 different companies)
+
+10. Given a word which can have wild card characters and a dictionary, find if the word is valid? (Catch is to do in O(1), Variants asked by 2 different companies), "d*g" is valid with dict: {dog, god,foo}
+
+11. Find all the combinations of size k of a word which are also palindromes? (Again variants asked by 2 companies)
+

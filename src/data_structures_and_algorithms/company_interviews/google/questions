@@ -1,0 +1,16 @@
+Google (Internship, US) :
+
+    1. Rewrite substring searching function
+    2. Rewrite malloc to allocated 16bit aligned memory gets, scanf('%s'), getline difference
+    3. There is a BST with floating point numbers in each node. Given a floating point number, find the node closest to it numerically.
+
+Google (Full Time) :
+
+    1. Given a set of n points in 2D space and a query point, find K nearest neighbours to the query point. 1 question for whole interview
+    2. Progressive Image rendering algorithm. Basically summing up 2 elements of an array and then storing the mean and difference between numbers and mean instead of storing number itself. Keep doing repeatedly until we have mean of all elements. I was explained the algo and asked to implement it.
+    3. Given a dictionary of words and a query word, determine if the any single letter in the query word can be replaced with another letter such that the new word is in dictionary. This is building block for auto correct technology.
+    4. Given a set of N points in 2D space and a query point + a number d, determine the number of points in the set that are within 'd' distance of query point.
+    5. finding the number of components in a graph. Question boiled down to this. Possible approximation ideas for Vertex Cover (Open discussion)
+    6. Design - Disaster Management - Using smartphones to identify people who are safe.
+    7. Design - Rate limiter for queries. Different approaches and their advantages / disadvantages. Discussion over OS concepts.
+
