@@ -23,15 +23,15 @@ public class ShorestSuperSequence {
     }
 
     public static String findOrder(List<String> strs) {
-	Map<Character, Set<Character>> map = new HashMap<>();
-	Set<Character> set = new HashSet<>();
-	Set<Character> visited = new HashSet<>();
+	Map<Character, Set<Character>> map = new HashMap<Character, Set<Character>>();
+	Set<Character> set = new HashSet<Character>();
+	Set<Character> visited = new HashSet<Character>();
 
 	for (String s : strs) {
 	    set.add(s.charAt(0));
 	    for (int i = 1; i < s.length(); i++) {
 		if (!map.containsKey(s.charAt(i - 1))) {
-		    Set<Character> adjacent = new HashSet<>();
+		    Set<Character> adjacent = new HashSet<Character>();
 		    adjacent.add(s.charAt(i));
 		    map.put(s.charAt(i - 1), adjacent);
 		} else {
@@ -41,7 +41,7 @@ public class ShorestSuperSequence {
 	    }
 	}
 
-	Stack<Character> stack = new Stack<>();
+	Stack<Character> stack = new Stack<Character>();
 	for (char c : set) {
 	    if (!visited.contains(c)) {
 		toposort(map, visited, stack, c);
@@ -57,7 +57,7 @@ public class ShorestSuperSequence {
     }
 
     public static void main(String[] args) {
-	List<String> list = new ArrayList<>();
+	List<String> list = new ArrayList<String>();
 
 	list.add("fbz");
 	list.add("jb");

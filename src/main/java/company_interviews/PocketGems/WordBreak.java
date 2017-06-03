@@ -2,7 +2,7 @@ package company_interviews.PocketGems;
 import java.util.*;
 public class WordBreak {
 	public boolean wordBreak(String s, Set<String> dict) {
-		if (s == null || s.isEmpty()) {
+		if (s == null || s.equals("")) {
 			return false;
 		}
 		
@@ -60,7 +60,7 @@ public class WordBreak {
 	
 	public static void main(String[] args) {
 		String s = "leetcode";
-		Set<String> set = new HashSet<>();
+		Set<String> set = new HashSet<String>();
 		set.add("leet");
 		set.add("code");
 		

@@ -7,7 +7,7 @@ package company_interviews.Palantir;
  *You do not have to identify the duplicate value
  */
 import java.util.*;
-
+//TODO fix this.
 public class Find_Duplicates_Unsorted_Array {
     public boolean isDuplicate(int[] array) {
 	if (array == null || array.length == 0) {
@@ -117,21 +117,21 @@ public class Find_Duplicates_Unsorted_Array {
 	    return false;
 	}
 
-	TreeSet<Integer> values = new TreeSet<>();
+	TreeSet<Integer> values = new TreeSet<Integer>();
 	for (int ind = 0; ind < nums.length; ind++) {
-
-	    Integer floor = values.floor(nums[ind] + t);// upper bond
-	    Integer ceil = values.ceiling(nums[ind] - t);// lower bond
-
-	    if ((floor != null && floor >= nums[ind])
-		    || (ceil != null && ceil <= nums[ind])) {
-		return true;
-	    }
-
-	    values.add(nums[ind]);
-	    if (ind >= k) {
-		values.remove(nums[ind - k]);
-	    }
+//
+//	    Integer floor = values.floor(nums[ind] + t);// upper bond
+//	    Integer ceil = values.ceiling(nums[ind] - t);// lower bond
+//
+//	    if ((floor != null && floor >= nums[ind])
+//		    || (ceil != null && ceil <= nums[ind])) {
+//		return true;
+//	    }
+//
+//	    values.add(nums[ind]);
+//	    if (ind >= k) {
+//		values.remove(nums[ind - k]);
+//	    }
 	}
 
 	return false;

@@ -16,14 +16,15 @@ public class ArrayIterator<Integer> implements Iterator<Integer> {
 		return pos < array.length;
 	}
 
+	//TODO: fix this
 	public Integer next() {
 		if (hasNext()) {
-			while ((int)array[pos] % 2 != 0) {
-				pos++;
-				if (!hasNext()) {
-					throw new NoSuchElementException();
-				}
-			}
+//			while ((int)array[pos] % 2 != 0) {
+//				pos++;
+//				if (!hasNext()) {
+//					throw new NoSuchElementException();
+//				}
+//			}
 			return array[pos++];
 		}else {
 		  	throw new NoSuchElementException();

@@ -34,7 +34,7 @@ public class RobotMove {
 	
 	public static int countSteps(int k) {
 		
-		HashSet<Point> hset = new HashSet<>();
+		HashSet<Point> hset = new HashSet<Point>();
 		dfs(hset, 0, 0, k);
 		
 //		int max = 0;

@@ -22,13 +22,13 @@ public class TripAdvisorEvaluateReversePolishNotation {
 	LinkedList<Integer> stack = new LinkedList<Integer>();
 	for (String s : tokens) {
 	    if (isOperand(s)) {
-		int op2 = stack.pop();
-		int op1 = stack.pop();
+		int op2 = stack.poll();
+		int op1 = stack.poll();
 		res = evaluate(op1, op2, s);
-		stack.push(res);
+		stack.add(res);
 	    } else {
 		try {
-		    stack.push(Integer.parseInt(s));
+		    stack.add(Integer.parseInt(s));
 		} catch (NumberFormatException ne) {
 		    System.out.println("Invalid Input");
 		}
@@ -45,17 +45,18 @@ public class TripAdvisorEvaluateReversePolishNotation {
 	return m.matches();
     }
 
+		// TODO: fix this
     public static int evaluate(int op1, int op2, String op) {
-	switch (op) {
-	case "+":
-	    return op1 + op2;
-	case "-":
-	    return op1 - op2;
-	case "*":
-	    return op1 * op2;
-	case "/":
-	    return op1 / op2;
-	}
+//	switch (op) {
+//	case "+":
+//	    return op1 + op2;
+//	case "-":
+//	    return op1 - op2;
+//	case "*":
+//	    return op1 * op2;
+//	case "/":
+//	    return op1 / op2;
+//	}
 	return 0;
     }
 
