@@ -18,11 +18,9 @@ public class ShuffleArray {
 
   /** Returns a random shuffling of the array. */
   public int[] shuffle() {
-    int[] oldArray = originalNums.clone();
-    shuffleHelper(originalNums, 0);
-    int[] newArray = originalNums.clone();
-    originalNums = oldArray.clone();
-    return newArray;
+    int[] temp = originalNums.clone();
+    shuffleHelper(temp, 1);
+    return temp;
   }
 
   private void swap(int[] nums, int sourceIndex, int destinationIndex){
@@ -35,7 +33,7 @@ public class ShuffleArray {
     if(index >= nums.length){
       return;
     }
-    int randomIndex = (int)(Math.random() * index);
+    int randomIndex = (int)(Math.random() * (index + 1) );
     swap(nums, index, randomIndex);
     shuffleHelper(nums, index + 1);
   }
